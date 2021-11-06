@@ -1,7 +1,7 @@
 # scrimba-search-bar-repo
 
-this is gonna be a repo for a little practice with a search bar
-search from a simple HTML collection of names
+* this is gonna be a repo for a little practice with a search bar
+* search from a simple HTML collection of names
 
 ## Principle
 
