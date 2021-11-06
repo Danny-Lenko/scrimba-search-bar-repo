@@ -1,19 +1,17 @@
 "use strict"
 
-document.getElementById('searchInput').addEventListener('keyup', function(event) {
-   let userInput = event.target.value.toLowerCase();
+document.addEventListener('keyup', function() {
+   const searchInput = document.getElementById('searchInput');
+   const namesCollection = document.getElementsByClassName('name');
+   let userInput = searchInput.value.toLowerCase();
 
-   let allNamesDOMCollection = document.getElementsByClassName('name');
+   for (let i = 0; i < namesCollection.length; i++) {
+      let oneName = namesCollection[i].textContent.toLowerCase();
 
-   for (let i = 0; i < allNamesDOMCollection.length; i++) {
-      const namesContent = allNamesDOMCollection[i].textContent.toLocaleLowerCase();
-
-      if (namesContent.includes(userInput)) {
-         allNamesDOMCollection[i].style.display = "block";
+      if ( oneName.includes(userInput) ) {
+         namesCollection[i].style.display = "block";
       } else {
-         allNamesDOMCollection[i].style.display = "none";
+         namesCollection[i].style.display = "none";
       }
    }
-
 })
-
